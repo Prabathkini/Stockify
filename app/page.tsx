@@ -1,4 +1,3 @@
-import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import chart from '@/public/charts/small-chart.svg'
 
@@ -48,10 +47,10 @@ const stockCards: stockCardProps[] = [
 
 export default function Home() {
   return (
-    <div className="px-6 py-2">
+    <div className="p-6">
       <div className="p-4 bg-white w-full rounded-lg drop-shadow space-y-2  ">
         <h1 className="font-semibold">My Stocks</h1>
-        <div className="flex gap-4 justify-evenly overflow-x-auto w-full flex-wrap">
+        <div className="flex gap-4   overflow-x-auto w-full flex-wrap">
           {stockCards.map((card) => (
             <div
               style={{ backgroundColor: `${card.background}` }}
