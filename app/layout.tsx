@@ -21,10 +21,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <main className="flex h-full">
-          <div className="hidden md:flex flex-col fixed h-screen w-[300px]">
+          <div className="hidden md:flex flex-col fixed h-screen w-[250px]">
             <SideBar />
           </div>
-          <div className="w-full md:ml-[300px] bg-[#F5F7F9] h-full">
+          <div className="w-full md:ml-[250px] bg-[#F5F7F9] h-full">
             <NavBar />
             {children}
           </div>
