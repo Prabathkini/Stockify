@@ -1,7 +1,7 @@
 
   import { cryptoTableProps } from "@/types/stock"
   
-  export const cryptoData:cryptoTableProps[] = [
+  export const data:cryptoTableProps[] = [
     {
         id: 1,
         suggestion: "STABLE",

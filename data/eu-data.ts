@@ -1,80 +1,107 @@
+export type Payment = {
+  id: number
+  stockName: string
+  symbol: string
+  suggestion: 'SELL' | 'BUY' | 'STABLE'
+}
 
-  import { stockTableProps } from "@/types/stock"
-  
-export const euData:stockTableProps[] = [
-    { "id": 1, "suggestion": "STABLE", "symbol": "^NDX", "stockName": "Nasdaq 100 Index" },
-    { "id": 2, "suggestion": "STABLE", "symbol": "AAPL", "stockName": "Apple Inc." },
-    { "id": 3, "suggestion": "STABLE", "symbol": "ADBE", "stockName": "Adobe Inc." },
-    { "id": 4, "suggestion": "STABLE", "symbol": "ADI", "stockName": "Analog Devices, Inc." },
-    { "id": 5, "suggestion": "STABLE", "symbol": "ADP", "stockName": "Automatic Data Processing, Inc." },
-    { "id": 6, "suggestion": "STABLE", "symbol": "ADSK", "stockName": "Autodesk, Inc." },
-    { "id": 7, "suggestion": "STABLE", "symbol": "AKAM", "stockName": "Akamai Technologies, Inc." },
-    { "id": 8, "suggestion": "STABLE", "symbol": "AMAT", "stockName": "Applied Materials, Inc." },
-    { "id": 9, "suggestion": "STABLE", "symbol": "AMD", "stockName": "Advanced Micro Devices, Inc." },
-    { "id": 10, "suggestion": "STABLE", "symbol": "AMX", "stockName": "América Móvil S.A.B. de C.V." },
-    { "id": 11, "suggestion": "STABLE", "symbol": "AMZN", "stockName": "Amazon.com, Inc." },
-    { "id": 12, "suggestion": "STABLE", "symbol": "ANSS", "stockName": "ANSYS, Inc." },
-    { "id": 13, "suggestion": "STABLE", "symbol": "APH", "stockName": "Amphenol Corporation" },
-    { "id": 14, "suggestion": "STABLE", "symbol": "APPS", "stockName": "Digital Turbine, Inc." },
-    { "id": 15, "suggestion": "STABLE", "symbol": "ASML", "stockName": "ASML Holding N.V." },
-    { "id": 16, "suggestion": "STABLE", "symbol": "ATVI", "stockName": "Activision Blizzard, Inc." },
-    { "id": 17, "suggestion": "STABLE", "symbol": "AVGO", "stockName": "Broadcom Inc." },
-    { "id": 18, "suggestion": "STABLE", "symbol": "AVID", "stockName": "Avid Technology, Inc." },
-    { "id": 19, "suggestion": "STABLE", "symbol": "AXP", "stockName": "American Express Company" },
-    { "id": 20, "suggestion": "STABLE", "symbol": "AYX", "stockName": "Alteryx, Inc." },
-    { "id": 21, "suggestion": "STABLE", "symbol": "AZPN", "stockName": "Aspen Technology, Inc." },
-    { "id": 22, "suggestion": "STABLE", "symbol": "BABA", "stockName": "Alibaba Group Holding Limited" },
-    { "id": 23, "suggestion": "STABLE", "symbol": "BB", "stockName": "BlackBerry Limited" },
-    { "id": 24, "suggestion": "STABLE", "symbol": "BIDU", "stockName": "Baidu, Inc." },
-    { "id": 25, "suggestion": "STABLE", "symbol": "BOX", "stockName": "Box, Inc." },
-    { "id": 26, "suggestion": "STABLE", "symbol": "CAN", "stockName": "Canaan Inc." },
-    { "id": 27, "suggestion": "STABLE", "symbol": "CAT", "stockName": "Caterpillar Inc." },
-    { "id": 28, "suggestion": "STABLE", "symbol": "CDNS", "stockName": "Cadence Design Systems, Inc." },
-    { "id": 29, "suggestion": "STABLE", "symbol": "CDW", "stockName": "CDW Corporation" },
-    { "id": 30, "suggestion": "STABLE", "symbol": "CEVA", "stockName": "CEVA, Inc." },
-    { "id": 31, "suggestion": "STABLE", "symbol": "CHKP", "stockName": "Check Point Software Technologies Ltd." },
-    { "id": 32, "suggestion": "STABLE", "symbol": "COMM", "stockName": "CommScope Holding Company, Inc." },
-    { "id": 33, "suggestion": "STABLE", "symbol": "COST", "stockName": "Costco Wholesale Corporation" },
-    { "id": 34, "suggestion": "BUY", "symbol": "CRM", "stockName": "Salesforce.com, Inc." },
-    { "id": 35, "suggestion": "STABLE", "symbol": "CRUS", "stockName": "Cirrus Logic, Inc." },
-    { "id": 36, "suggestion": "STABLE", "symbol": "CSCO", "stockName": "Cisco Systems, Inc." },
-    { "id": 37, "suggestion": "STABLE", "symbol": "CRWD", "stockName": "CrowdStrike Holdings, Inc." },
-    { "id": 38, "suggestion": "STABLE", "symbol": "CYBR", "stockName": "CyberArk Software Ltd." },
-    { "id": 39, "suggestion": "STABLE", "symbol": "DBX", "stockName": "Dropbox, Inc." },
-    { "id": 40, "suggestion": "STABLE", "symbol": "DDD", "stockName": "3D Systems Corporation" },
-    { "id": 41, "suggestion": "BUY", "symbol": "DDOG", "stockName": "Datadog, Inc." },
-    { "id": 42, "suggestion": "STABLE", "symbol": "DELL", "stockName": "Dell Technologies Inc." },
-    { "id": 43, "suggestion": "STABLE", "symbol": "DIS", "stockName": "The Walt Disney Company" },
-    { "id": 44, "suggestion": "STABLE", "symbol": "DNB", "stockName": "Dun & Bradstreet Holdings, Inc." },
-    { "id":45, "suggestion": "STABLE", "symbol": "DOCU", "stockName": "DocuSign, Inc." },
-    { "id": 46, "suggestion": "STABLE", "symbol": "DOYU", "stockName": "DouYu International Holdings Limited" },
-    { "id": 47, "suggestion": "STABLE", "symbol": "DPZ", "stockName": "Domino's Pizza, Inc." },
-    { "id": 48, "suggestion": "BUY", "symbol": "DXC", "stockName": "DXC Technology Company" },
-    { "id": 49, "suggestion": "STABLE", "symbol": "EA", "stockName": "Electronic Arts Inc." },
-    { "id": 50, "suggestion": "BUY", "symbol": "EBAY", "stockName": "eBay Inc." },
-    { "id": 51, "suggestion": "STABLE", "symbol": "EGAN", "stockName": "Egain Corporation" },
-    { "id": 52, "suggestion": "STABLE", "symbol": "EMC", "stockName": "EMC Corporation" },
-    { "id": 53, "suggestion": "STABLE", "symbol": "ESTC", "stockName": "Elastic N.V." },
-    { "id": 54, "suggestion": "STABLE", "symbol": "EVBG", "stockName": "Everbridge, Inc." },
-    { "id": 55, "suggestion": "BUY", "symbol": "FIS", "stockName": "Fidelity National Information Services, Inc." },
-    { "id": 56, "suggestion": "STABLE", "symbol": "FSLR", "stockName": "First Solar, Inc." },
-    { "id": 57, "suggestion": "STABLE", "symbol": "FTCH", "stockName": "Farfetch Limited" },
-    { "id": 58, "suggestion": "STABLE", "symbol": "FTNT", "stockName": "Fortinet, Inc." },
-    { "id": 59, "suggestion": "STABLE", "symbol": "GDDY", "stockName": "GoDaddy Inc." },
-    { "id": 60, "suggestion": "STABLE", "symbol": "GIB", "stockName": "CGI Inc." },
-    { "id": 61, "suggestion": "STABLE", "symbol": "GILD", "stockName": "Gilead Sciences, Inc." },
-    { "id": 62, "suggestion": "STABLE", "symbol": "GLW", "stockName": "Corning Incorporated" },
-    { "id": 63, "suggestion": "STABLE", "symbol": "GOOG", "stockName": "Alphabet Inc." },
-    { "id": 64, "suggestion": "SELL", "symbol": "GRMN", "stockName": "Garmin Ltd." },
-    { "id": 65, "suggestion": "STABLE", "symbol": "GRMN", "stockName": "Garmin Ltd." },
-    { "id": 66, "suggestion": "STABLE", "symbol": "GSAT", "stockName": "Globalstar, Inc." },
-    { "id": 67, "suggestion": "STABLE", "symbol": "GWRE", "stockName": "Guidewire Software, Inc." },
-    { "id": 68, "suggestion": "BUY", "symbol": "HAWK", "stockName": "Blackhawk Network Holdings, Inc." },
-    { "id": 69, "suggestion": "STABLE", "symbol": "HD", "stockName": "The Home Depot, Inc." },
-    { "id": 70, "suggestion": "STABLE", "symbol": "HPE", "stockName": "Hewlett Packard Enterprise Company" },
-    { "id": 71, "suggestion": "STABLE", "symbol": "HPQ", "stockName": "HP Inc." },
-    { "id": 72, "suggestion": "STABLE", "symbol": "HUBS", "stockName": "HubSpot, Inc." },
-    { "id": 73, "suggestion": "STABLE", "symbol": "IBM", "stockName": "International Business Machines Corporation" }
-    ]
+export const data: Payment[] = [
+  {
+      id: 1,
+      suggestion: "BUY",
+      symbol: "^FCHI",
+      stockName: "CAC 40"
+  },
+  {
+      id: 2,
+      suggestion: "BUY",
+      symbol: "^GDAXI",
+      stockName: "DAX"
+  },
+  {
+      id: 3,
+      suggestion: "STABLE",
+      symbol: "1COV_DE",
+      stockName: "1&1 AG"
+  },
+  {
+      id: 4,
+      suggestion: "STABLE",
+      symbol: "ACA_PA",
+      stockName: "Crédit Agricole SA"
+  },
+  {
+      id: 5,
+      suggestion: "STABLE",
+      symbol: "AC_PA",
+      stockName: "Accor SA"
+  },
+  {
+      id: 6,
+      suggestion: "STABLE",
+      symbol: "ADP_PA",
+      stockName: "Airbus SE"
+  },
+  {
+      id: 7,
+      suggestion: "STABLE",
+      symbol: "ADS_DE",
+      stockName: "Adidas AG"
+  },
+  {
+      id: 8,
+      suggestion: "SELL",
+      symbol: "AF_PA",
+      stockName: "Air France-KLM SA"
+  },
+  {
+      id: 9,
+      suggestion: "STABLE",
+      symbol: "AFX_DE",
+      stockName: "Aareal Bank AG"
+  },
+  {
+      id: 10,
+      suggestion: "STABLE",
+      symbol: "AI_PA",
+      stockName: "Air Liquide SA"
+  },
+  {
+      id: 11,
+      suggestion: "STABLE",
+      symbol: "AIR_PA",
+      stockName: "Airbus SE"
+  },
+  {
+      id: 12,
+      suggestion: "STABLE",
+      symbol: "AIXA_DE",
+      stockName: "Aixtron SE"
+  },
+  {
+      id: 13,
+      suggestion: "STABLE",
+      symbol: "ALO_PA",
+      stockName: "Alstom SA"
+  },
+  {
+      id: 14,
+      suggestion: "STABLE",
+      symbol: "ALV_DE",
+      stockName: "Allianz SE"
+  },
+  {
+      id: 15,
+      suggestion: "STABLE",
+      symbol: "ASML_AS",
+      stockName: "ASML Holding NV"
+  },
+  {
+      id: 16,
+      suggestion: "STABLE",
+      symbol: "ATO_PA",
+      stockName: "Atos SE"
+  }
+]
     
       

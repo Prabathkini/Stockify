@@ -1,5 +1,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { SuggestionTable } from './suggestion-table'
+import { SuggestionTable } from './us-suggestion-table'
+import { EuSuggestionTable } from './eu-suggestion-table'
+import { CryptoSuggestionTable } from './crypto-suggestion-table'
 
 export function TabsDemo() {
   return (
@@ -15,10 +17,14 @@ export function TabsDemo() {
         </div>
       </TabsContent>
       <TabsContent value="EU">
-        <div className="w-full h-12 bg-white dark:bg-muted"></div>
+        <div className="w-full h-12 bg-white dark:bg-muted">
+          <EuSuggestionTable />
+        </div>
       </TabsContent>
       <TabsContent value="crypto">
-        <div className="w-full h-12 bg-white dark:bg-muted"></div>
+        <div className="w-full h-12 bg-white dark:bg-muted">
+          <CryptoSuggestionTable />
+        </div>
       </TabsContent>
     </Tabs>
   )

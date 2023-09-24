@@ -35,8 +35,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table'
-import { Payment } from '@/data/us-data'
-import { data } from '@/data/us-data'
+import { data, Payment } from '@/data/eu-data'
 
 export const columns: ColumnDef<Payment>[] = [
   {
@@ -86,21 +85,27 @@ export const columns: ColumnDef<Payment>[] = [
     header: 'Suggestion',
     cell: ({ row }) => (
       <div className="w-20 text-center rounded-md select-none">
-        {row.getValue('suggestion') == 'SHORT' ? (
-          <h6 className="bg-red-500 text-white rounded-md cursor-pointer">
-            SHORT
-          </h6>
-        ) : (
-          <h6 className="bg-green-500 text-white rounded-md cursor-pointer">
-            LONG
-          </h6>
-        )}
+        <div className="w-20 text-center rounded-md select-none">
+          {row.getValue('suggestion') === 'SELL' ? (
+            <h6 className="bg-red-500 text-white rounded-md cursor-pointer">
+              SELL
+            </h6>
+          ) : row.getValue('suggestion') === 'BUY' ? (
+            <h6 className="bg-green-500 text-white rounded-md cursor-pointer">
+              BUY
+            </h6>
+          ) : (
+            <h6 className="bg-orange-500 text-white rounded-md cursor-pointer">
+              STABLE
+            </h6>
+          )}
+        </div>
       </div>
     ),
   },
 ]
 
-export function SuggestionTable() {
+export function EuSuggestionTable() {
   const [sorting, setSorting] = React.useState<SortingState>([])
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     [],
