@@ -17,12 +17,12 @@ export function TabsDemo() {
         </div>
       </TabsContent>
       <TabsContent value="EU">
-        <div className="w-full h-12 bg-white dark:bg-muted">
+        <div className="p-4 w-full rounded-md bg-white dark:bg-muted">
           <EuSuggestionTable />
         </div>
       </TabsContent>
       <TabsContent value="crypto">
-        <div className="w-full h-12 bg-white dark:bg-muted">
+        <div className="p-4 rounded-md w-full bg-white dark:bg-muted">
           <CryptoSuggestionTable />
         </div>
       </TabsContent>
