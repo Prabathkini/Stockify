@@ -2,6 +2,8 @@
 
 import * as React from 'react'
 
+import { data } from '@/data/us-data'
+
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 import {
@@ -38,7 +40,7 @@ export function CommandMenu({ ...props }) {
   return (
     <>
       <Button
-        variant="outline"   
+        variant="outline"
         className={cn(
           'w-[300px] relative justify-start text-sm text-muted-foreground',
         )}
@@ -53,22 +55,21 @@ export function CommandMenu({ ...props }) {
       </Button>
       <CommandDialog open={open} onOpenChange={setOpen}>
         <CommandInput
-          placeholder="Enter doctor name..."
+          placeholder="Enter Stock name..."
           className="text-black"
         />
         <CommandList>
-          <CommandEmpty>No stock found.</CommandEmpty>
-          <CommandGroup heading="Doctors">
-            <CommandItem value="Tesla" className="text-black gap-2 ml-2">
-              <Image
-                src={''}
-                width={36}
-                height={36}
-                className="rounded-full aspect-square"
-                alt="Tesla profile picture"
-              />
-              Tesla
-            </CommandItem>
+          <CommandEmpty>No stocks Found</CommandEmpty>
+          <CommandGroup heading="Stocks">
+            {data.map((stock) => (
+              <CommandItem
+                key={stock.id}
+                value={stock.stockName}
+                className="text-black gap-2 ml-2 cursor-pointer dark:text-white"
+              >
+                {stock.stockName}
+              </CommandItem>
+            ))}
           </CommandGroup>
         </CommandList>
       </CommandDialog>

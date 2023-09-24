@@ -8,6 +8,7 @@ import {
   Glasses,
   Heart,
   Search,
+  Settings,
 } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 import { Button } from '@/components//ui/button'
@@ -32,18 +33,24 @@ const routes: routeProps[] = [
     label: 'Explore',
     icon: Search,
     href: '/explore',
-    disabled: false,
+    disabled: true,
   },
   {
     label: 'Watchlist',
     icon: Heart,
     href: '/watchlist',
-    disabled: false,
+    disabled: true,
   },
   {
     label: 'News',
     icon: Newspaper,
     href: '/news',
+    disabled: true,
+  },
+  {
+    label: 'Settings',
+    icon: Settings,
+    href: '/settings',
     disabled: true,
   },
 ]
@@ -58,14 +65,14 @@ export default function SideNav() {
           key={route.href}
           variant={'ghost'}
           disabled={route.disabled}
-          className="w-full justify-start disabled:text-black cursor-not-allowed"
+          className="w-full justify-start text-black dark:text-white"
         >
           <Link
             href={route.href}
             className="h-10 w-full p-3 mx-4 flex justify-start items-center cursor-pointer rounded-lg text-sm font-medium"
           >
             <div className="flex ">
-              <route.icon className="h-5 w-5 mr-3 text-black" />
+              <route.icon className="h-5 w-5 mr-3 text-black dark:text-white" />
               {route.label}
             </div>
           </Link>

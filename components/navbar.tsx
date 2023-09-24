@@ -3,12 +3,14 @@ import { CommandMenu } from './command-menu'
 import { BellDot, ChevronDown, ShoppingBag } from 'lucide-react'
 import { Separator } from './ui/separator'
 import { UserAvatar } from './user-avatar'
+import { ModeToggle } from './theme-toggle'
 
 export default function NavBar() {
   return (
-    <div className="h-16 p-4 bg-white w-full flex items-center justify-between border-b">
+    <div className="h-16 p-4 bg-white dark:bg-popover w-full flex items-center justify-between border-b">
       <CommandMenu />
       <div className=" flex items-center gap-4">
+        <ModeToggle />
         <div className="rounded-full p-2 hover:bg-zinc-200 cursor-pointer">
           <BellDot className="stroke-2" />
         </div>

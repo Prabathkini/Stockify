@@ -1,0 +1,27 @@
+const data = [
+    { id: 1, suggestion: 'SHORT', symbol: '^GDAXI' },
+    { id: 2, suggestion: 'LONG', symbol: 'AZN_L' },
+    { id: 3, suggestion: 'SHORT', symbol: 'BN_PA' },
+    { id: 4, suggestion: 'SHORT', symbol: 'FME_DE' },
+    { id: 5, suggestion: 'SHORT', symbol: 'HO_PA' },
+    { id: 6, suggestion: 'LONG', symbol: 'UBI_PA' },
+    { id: 7, suggestion: 'LONG', symbol: 'VIV_PA' },
+    { id: 8, suggestion: 'SHORT', symbol: '^GDAXI' },
+    { id: 9, suggestion: 'LONG', symbol: 'AZN_L' },
+    { id: 10, suggestion: 'SHORT', symbol: 'BN_PA' },
+    { id: 11, suggestion: 'SHORT', symbol: 'CRM' },
+    { id: 12, suggestion: 'SHORT', symbol: 'DDOG' },
+    { id: 13, suggestion: 'SHORT', symbol: 'DXC' },
+    { id: 14, suggestion: 'SHORT', symbol: 'EBAY' },
+    { id: 15, suggestion: 'SHORT', symbol: 'FIS' },
+    { id: 16, suggestion: 'LONG', symbol: 'GRMN' },
+    { id: 17, suggestion: 'SHORT', symbol: 'HAWK' },
+    { id: 18, suggestion: 'SHORT', symbol: 'JNPR' },
+    { id: 19, suggestion: 'SHORT', symbol: 'MRNA' },
+    { id: 20, suggestion: 'SHORT', symbol: 'MSFT' },
+    { id: 21, suggestion: 'SHORT', symbol: 'NFLX' },
+    { id: 22, suggestion: 'SHORT', symbol: 'ORCL' },
+    { id: 23, suggestion: 'SHORT', symbol: 'QCOM' },
+    { id: 24, suggestion: 'LONG', symbol: 'UNH' }
+  ]
+  
