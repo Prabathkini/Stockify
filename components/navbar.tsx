@@ -11,7 +11,7 @@ export default function NavBar() {
       <CommandMenu />
       <div className=" flex items-center gap-4">
         <ModeToggle />
-        <div className="rounded-full p-2 hover:bg-zinc-200 cursor-pointer">
+        <div className="rounded-full p-2 hover:bg-zinc-200 dark:hover:bg-popover cursor-pointer">
           <BellDot className="stroke-2" />
         </div>
         <Separator orientation="vertical" decorative className="w-1 h-full" />

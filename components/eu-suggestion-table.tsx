@@ -86,6 +86,7 @@ export const columns: ColumnDef<Payment>[] = [
     cell: ({ row }) => (
       <div className="w-20 text-center rounded-md select-none">
         <div className="w-20 text-center rounded-md select-none">
+        </div>
           {row.getValue('suggestion') === 'SELL' ? (
             <h6 className="bg-red-500 text-white rounded-md cursor-pointer">
               SELL
@@ -99,7 +100,6 @@ export const columns: ColumnDef<Payment>[] = [
               STABLE
             </h6>
           )}
-        </div>
       </div>
     ),
   },

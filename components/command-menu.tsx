@@ -2,7 +2,9 @@
 
 import * as React from 'react'
 
-import { data } from '@/data/us-data'
+import { data as usData } from '@/data/us-data'
+import { data as euData } from '@/data/eu-data'
+import { data as cryptoData } from '@/data/crypto-data'
 
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
@@ -42,7 +44,7 @@ export function CommandMenu({ ...props }) {
       <Button
         variant="outline"
         className={cn(
-          'w-[300px] relative justify-start text-sm text-muted-foreground',
+          'w-[500px] relative justify-start text-sm text-muted-foreground',
         )}
         onClick={() => setOpen(true)}
         {...props}
@@ -60,14 +62,36 @@ export function CommandMenu({ ...props }) {
         />
         <CommandList>
           <CommandEmpty>No stocks Found</CommandEmpty>
-          <CommandGroup heading="Stocks">
-            {data.map((stock) => (
+          <CommandGroup heading="US">
+            {usData.map((stock) => (
               <CommandItem
                 key={stock.id}
                 value={stock.stockName}
                 className="text-black gap-2 ml-2 cursor-pointer dark:text-white"
               >
                 {stock.stockName}
+              </CommandItem>
+            ))}
+          </CommandGroup>
+          <CommandGroup heading="EU">
+            {euData.map((stock) => (
+              <CommandItem
+                key={stock.id}
+                value={stock.stockName}
+                className="text-black gap-2 ml-2 cursor-pointer dark:text-white"
+              >
+                {stock.stockName}
+              </CommandItem>
+            ))}
+          </CommandGroup>
+          <CommandGroup heading="Crypto">
+            {cryptoData.map((stock) => (
+              <CommandItem
+                key={stock.id}
+                value={stock.cryptoName}
+                className="text-black gap-2 ml-2 cursor-pointer dark:text-white"
+              >
+                {stock.cryptoName}
               </CommandItem>
             ))}
           </CommandGroup>

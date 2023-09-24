@@ -194,6 +194,7 @@ export function SuggestionTable() {
                 <TableRow
                   key={row.id}
                   data-state={row.getIsSelected() && 'selected'}
+                  className='hover:bg-popover rounded-md cursor-pointer'
                 >
                   {row.getVisibleCells().map((cell) => (
                     <TableCell key={cell.id}>
